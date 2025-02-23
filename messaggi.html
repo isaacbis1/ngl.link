@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Messaggi Anonimi</title>
+  <link rel="stylesheet" href="styles.css" />
+
+  <!-- Firebase Compat: app e firestore -->
+  <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore-compat.js"></script>
+</head>
+<body>
+  <!-- Schermata dei Messaggi -->
+  <div class="main-container" id="main-container">
+    <!-- Box superiore con avatar e handle -->
+    <div class="top-box">
+      <div class="user-handle-container">
+        <!-- Assicurati che "avatar.png" esista nella stessa cartella oppure modifica il path -->
+        <img src="avatar.png" alt="Avatar" class="avatar" />
+        <div class="user-handle">@isaacbis</div>
+      </div>
+      <p class="prompt-title"><strong>Inviami dei messaggi anonimi!</strong></p>
+      <textarea class="message-textarea" id="message" placeholder="Invia un messaggio anonimo..."></textarea>
+      <button class="send-btn" id="sendBtn"><span>📩</span> Invia</button>
+      <p class="anonymous-note">🔒 domande e risposte anonime</p>
+    </div>
+
+    <!-- Statistiche e pulsante per ricevere messaggi -->
+    <div class="stats">
+      <p><span id="counter">464</span> persone hanno appena toccato il pulsante</p>
+    </div>
+    <button class="receive-btn" id="receiveBtn">Ricevi i tuoi messaggi!</button>
+
+    <!-- Footer -->
+    <div class="footer">
+      <a href="#">Terms</a>
+      <a href="#">Privacy</a>
+    </div>
+  </div>
+
+  <!-- Carica lo script per i messaggi -->
+  <script src="messaggi.js"></script>
+</body>
+</html>
