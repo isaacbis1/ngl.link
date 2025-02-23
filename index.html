@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Messaggi Anonimi</title>
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js"></script>
+</head>
+<body>
+    <div class="container">
+        <!-- Schermata di Login -->
+        <div class="login-box">
+            <h2>Accedi / Registrati</h2>
+            <input type="email" id="email" placeholder="Email">
+            <input type="password" id="password" placeholder="Password">
+            <button class="login-btn">Entra</button>
+            <p id="login-error" class="error-message"></p>
+        </div>
+
+        <!-- Contenuto Principale (Nascosto fino al login) -->
+        <div class="content-box hidden">
+            <div class="message-box">
+                <div class="user-info">
+                    <img src="default_avatar.png" alt="User Avatar" class="avatar">
+                    <span class="username" id="user-email">@utente</span>
+                </div>
+                <p class="message-prompt"><strong>Inviami messaggi anonimi!</strong></p>
+                <textarea id="message" placeholder="Invia un messaggio anonimo..."></textarea>
+                <button class="send-btn"><span>📩</span> Invia</button>
+                <p class="anonymous-note">🔒 Domande e risposte anonime</p>
+            </div>
+            <button class="receive-btn">Ricevi i tuoi messaggi!</button>
+            <button class="logout-btn">Logout</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
+
